@@ -1,8 +1,7 @@
 body {
-  font-size: 0.875rem;
+  font: 0.875rem "Work Sans",sans-serif;
+  background: #fafbfc;
   color: #fff;
-  background-color: #fafbfc;
-  font-family: "Work Sans",sans-serif;
 }
 
 .container-fluid {
@@ -54,12 +53,10 @@ body {
 }
 
 .logo {
+  font: 800 1.25rem "Open Sans", sans-serif;
   color: #3d9aee;
   padding-right: 100px;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 800;
 }
 
 .save-status {
@@ -68,21 +65,19 @@ body {
 }
 
 .save-status:before {
+  font: 1rem Icons;
   display: inline-block;
   content: "\e900";
-  font-family: Icons;
-  font-size: 1rem;
   padding-right: 6px;
 }
 
 .button {
+  font: 1.5rem "Icons";
+  background: transparent;
   min-width: 45px;
   min-height: 34px;
   outline: none;
   border: none;
-  font-size: 1.5rem;
-  font-family: "Icons";
-  background-color: transparent;
   -webkit-transition: 400ms color ease-in;
   transition: 400ms color ease-in;
 }
@@ -121,11 +116,10 @@ body {
 }
 
 .button--create {
+  background: -webkit-gradient(linear, right top, left top, from(#ff5858), to(#f857a6)) #ff6e40;
+  background: linear-gradient(to left, #ff5858 0%, #f857a6 100%) #ff6e40;
   padding: 18px 22px;
   border-radius: 6px;
-  background-color: #ff6e40;
-  background-image: -webkit-gradient(linear, right top, left top, from(#ff5858), to(#f857a6));
-  background-image: linear-gradient(to left, #ff5858 0%, #f857a6 100%);
   color: #fff;
   font-size: 0.875rem;
   font-weight: 500;
@@ -223,10 +217,10 @@ body {
 }
 
 .noUi-handle {
+  background: #1f8beb;
   width: 20px !important;
   height: 14px !important;
   border-radius: 4px;
-  background-color: #1f8beb;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -242,7 +236,7 @@ body {
 }
 
 .noUi-connect {
-  background-color: #89c0f1;
+  background: #89c0f1;
 }
 
 .noUi-target {
@@ -283,10 +277,10 @@ body {
 }
 
 .category__title {
+  background: #f1f8fe;
   -webkit-box-shadow: 0 0 2px rgba(59, 148, 236, 0.3);
   box-shadow: 0 0 2px rgba(59, 148, 236, 0.3);
   border-radius: 6px;
-  background-color: #f1f8fe;
   width: 15%;
 }
 
@@ -409,6 +403,7 @@ body {
 
 .legend-small {
   position: relative;
+  z-index: 10;
 }
 
 .legend__item {
@@ -496,14 +491,13 @@ body {
 }
 
 .sidebar-title:before {
+  font: 4.8rem "Icons";
   display: block;
   content: '\e904';
   position: absolute;
   right: 30px;
   bottom: -22px;
   color: #47a2f2;
-  font-family: "Icons";
-  font-size: 4.8rem;
 }
 
 .sidebar-title + .sidebar-group .sidebar-group-name {
@@ -567,9 +561,14 @@ body {
 .sidebar-stats__option {
   margin-bottom: 15px;
   border: 1px solid #dde5ed;
-  background: #fafbfc;
+  background: #fafbfc url("../images/dropdown-ico.svg") no-repeat 95% 50%;
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.sidebar-stats__option::-ms-expand {
+  display: none;
 }
 
 .sidebar-stats__textbox {
@@ -589,6 +588,7 @@ body {
 }
 
 .sidebar-stats__label:before {
+  background: #fafbfc;
   content: "";
   display: inline-block;
   position: absolute;
@@ -597,7 +597,6 @@ body {
   border-radius: 5px;
   left: 0;
   border: 1px solid #dde5ed;
-  background-color: #fafbfc;
   -webkit-transition: 200ms background-color ease-in;
   transition: 200ms background-color ease-in;
 }
@@ -607,7 +606,7 @@ body {
 }
 
 .sidebar-stats__checkbox:checked + .sidebar-stats__label:before {
-  background-color: #6893b5;
+  background: #6893b5;
 }
 
 .sidebar-stats__color {
@@ -633,13 +632,12 @@ body {
 }
 
 .expand-button:before {
+  font: 1.2rem "Icons";
   display: block;
   content: "\f107";
   position: absolute;
   top: 30%;
   right: 1rem;
-  font-family: "Icons";
-  font-size: 1.2rem;
   color: #6893b5;
 }
 
