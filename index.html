@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <nav class="header-left">
+        <div class="logo">LOGO eXAMPLE</div>
+        <button class="button button--view">&#xe909;</button>
+        <button class="button button--view active">&#xe908;</button>
+        <button class="button button--view">&#xe906;</button>
+        <button class="button button--view">&#xe907;</button>
+    </nav>
+    <nav class="header-right">
+        <span class="save-status">Saved</span>
+
+            <button class="button button--create">Create</button>
+        <div class="button-list">
+            <button class="button button--actions">&#xe905;</button>
+            <button class="button button--actions" id="showSideBar">&#xe904;</button>
+            <button class="button button--actions">&#xe903;</button>
+            <button class="button button--actions">&#xe902;</button>
+        </div>
+
+    </nav>
+    <div id="sidebar">
+        <div class="sidebar-title">
+            <h3>Design</h3>
+        </div>
+        <div class="sidebar-group">
+            <div class="sidebar-group-name">
+                <h4>Layout</h4>
+                <button class="button expand-button"></button>
+            </div>
+            <div class="sidebar-stats">
+                <div class="sidebar-stats__name">Header</div>
+                <select name="option-header" class="sidebar-stats__option">
+                    <option value="Category">Category</option>
+                </select>
+                <div class="sidebar-stats__name">Subheader</div>
+                <select name="option-header" class="sidebar-stats__option">
+                    <option value="Status">Status</option>
+                </select>
+                <div class="sidebar-stats__name">Item label</div>
+                <select name="option-header" class="sidebar-stats__option">
+                    <option value="Task name">Task name</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="sidebar-group">
+            <div class="sidebar-group-name">
+                <h4>Colors</h4>
+                <button class="button expand-button"></button>
+            </div>
+            <div class="sidebar-stats">
+                <div class="sidebar-stats__name">Color by</div>
+                <select name="option-color" class="sidebar-stats__option">
+                    <option value="Status">Status</option>
+                </select>
+                <input type="checkbox" id="inheritColor" class="sidebar-stats__checkbox">
+                <label class="sidebar-stats__label" for="inheritColor">Subheader inherits<br>
+                    header color</label>
+                <div class="sidebar-stats__name">Header color</div>
+                <ul>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box header-lightblue"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="Header">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box header-blue"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box header-darkblue"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="">
+                    </li>
+                </ul>
+                <div class="sidebar-stats__name">Subheader color</div>
+                <ul>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box rose"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="Research">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box yellow"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="In progress">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box green"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="Backlog">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box red"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="Reopened">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box blue"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="New">
+                    </li>
+                    <li class="sidebar-stats__color">
+                        <div class="color-box grey"> </div>
+                        <input type="text" class="sidebar-stats__textbox" value="None">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row date">
+        <div class="col-3 date-calendar">
+            <button class="button date__button">&#xe90a;</button>
+            <div class="date__text">
+                <time datetime="2016-01-01">01.01.2016 </time> - <time datetime="2018-01-01">01.01.2018</time>
+            </div>
+
+
+        </div>
+        <div class="col-21">
+            <div class="row date-range">
+                <div class="col-lg-1 col-md-4 col-6">
+                    <div id="date-range__start"></div>
+                </div>
+
+                <div class="col-lg-21 col-md-16 col-12">
+                    <div id="date-range__slider"></div>
+                </div>
+               <div class="col-lg-1 col-md-4 col-6">
+                   <div id="date-range__end"></div>
+               </div>
+            </div>
+            <div class="row date-list">
+                <div class="date-list__item col-3">Q1’16</div>
+                <div class="date-list__item col-3">Q2’16</div>
+                <div class="date-list__item col-1">J’16</div>
+                <div class="date-list__item col-1">A’16</div>
+                <div class="date-list__item col-1">S’16</div>
+                <div class="date-list__item col-1">O’16</div>
+                <div class="date-list__item col-1">N’16</div>
+                <div class="date-list__item col-1">D’16</div>
+                <div class="date-list__item col-6">H1’17</div>
+                <div class="date-list__item col-3">Q3’17</div>
+                <div class="date-list__item col-3">Q4’17</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ <section class="container-fluid">
+          <div class="row">
+              <div class="col-3 category" >
+                  <div class="category__title">
+                      <h3>design ux</h3>
+                  </div>
+                  <div class="category-list">
+                      <div class="category__item rose">Research</div>
+                      <div class="category__item yellow">In progress</div>
+                      <div class="category__item green category--wide">BAcklog<br> </div>
+                  </div>
+              </div>
+              <div class="col-21 roads">
+                  <div class="row grid">
+                    <div class="grid__item col-3"></div>
+                    <div class="grid__item col-3"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-1"></div>
+                      <div class="grid__item col-6"></div>
+                      <div class="grid__item col-3"></div>
+                      <div class="grid__item col-3"></div>
+                  </div>
+                  <div class="row road rose">
+                      <div class="col-6"></div>
+                      <div class="col-1 road__item">
+                          Das...
+                      </div>
+                      <div class="col-2"></div>
+                      <div class="col-3 road__item">
+                          Template
+                      </div>
+                      <div class="col-12"></div>
+                  </div>
+                  <div class="row road yellow">
+                      <div class="col-6 road__item">UX</div>
+                      <div class="col-7"></div>
+                      <div class="col-1 road__item">Flo...</div>
+                      <div class="col-4"></div>
+                      <div class="col-3 road__item">UX</div>
+                      <div class="col-3"></div>
+                  </div>
+                  <div class="row road green">
+                      <div class="col-10"></div>
+                      <div class="col-1 road__item">Flat...</div>
+                      <div class="col-13"></div>
+                  </div>
+                  <div class="row road green">
+                    <div class="col-2"></div>
+                      <div class="col-3 road__item">Prototyping</div>
+                      <div class="col-10"></div>
+                      <div class="col-3 road__item">Private Policy</div>
+                      <div class="col-6"></div>
+                  </div>
+
+
+              </div>
+          </div>
+        </section>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-3 category" >
+            <div class="category__title">
+                <h3>SLICING</h3>
+            </div>
+            <div class="category-list">
+                <div class="category__item rose">Research</div>
+                <div class="category__item yellow category--wide">In progress</div>
+                <div class="category__item red category--wide">REOPENED </div>
+                <div class="category__item grey category--wide">sTATUS: NONE</div>
+            </div>
+        </div>
+        <div class="col-21 roads">
+            <div class="row grid">
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-6"></div>
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-3"></div>
+            </div>
+            <div class="row road rose"></div>
+            <div class="row road yellow">
+                <div class="col-8"></div>
+                <div class="col-3 road__item">Home page Design</div>
+                <div class="col-13"></div>
+            </div>
+            <div class="row road yellow">
+               <div class="col-3"></div>
+                <div class="col-1 road__item">...</div>
+                <div class="col-20"></div>
+            </div>
+            <div class="row road red">
+                <div class="col-7"></div>
+                <div class="col-3 road__item">Home page Design</div>
+                <div class="col-6"></div>
+                <div class="col-2 road__item">Buttons</div>
+                <div class="col-6"></div>
+            </div>
+            <div class="row road red">
+                <div class="col-4 road__item">
+                    Planing
+                </div>
+                <div class="col-20"></div>
+            </div>
+            <div class="row road grey">
+                <div class="col-6"></div>
+                <div class="col-3 road__item">Terra</div>
+                <div class="col-15"></div>
+            </div>
+            <div class="row road grey">
+                <div class="col-14"></div>
+                <div class="col-2 road__item">Incognito</div>
+                <div class="col-8"></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-3 category" >
+            <div class="category__title">
+                <h3>architecture</h3>
+            </div>
+            <div class="category-list">
+                <div class="category__item rose">Research</div>
+                <div class="category__item yellow">In progress</div>
+                <div class="category__item green category--wide">Backlog </div>
+                <div class="category__item blue">new</div>
+                <div class="category__item purple">completed</div>
+            </div>
+        </div>
+        <div class="col-21 roads">
+            <div class="row grid">
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-1"></div>
+                <div class="grid__item col-6"></div>
+                <div class="grid__item col-3"></div>
+                <div class="grid__item col-3"></div>
+            </div>
+            <div class="row road rose">
+                <div class="col-6"></div>
+                <div class="col-1 road__item">
+                    Das...
+                </div>
+                <div class="col-17"></div>
+            </div>
+            <div class="row road yellow">
+                <div class="col-13"></div>
+                <div class="col-1 road__item">Flo...</div>
+                <div class="col-4"></div>
+                <div class="col-3 road__item">UX</div>
+                <div class="col-3"></div>
+            </div>
+            <div class="row road green">
+                <div class="col-10"></div>
+                <div class="col-1 road__item">Flat...</div>
+                <div class="col-13"></div>
+                <div class="col-2"></div>
+                <div class="col-4 road__item">Prototyping</div>
+                <div class="col-9"></div>
+                <div class="col-3 road__item">Private Policy</div>
+                <div class="col-6"></div>
+            </div>
+            <div class="row road blue">
+                <div class="col-17"></div>
+                <div class="col-2 road__item">Programming</div>
+                <div class="col-5"></div>
+            </div>
+            <div class="row road purple">
+                <div class="col-2 road__item">Meeting</div>
+                <div class="col-5"></div>
+                <div class="col-1 road__item">Meeting</div>
+                <div class="col-16"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="legend">
+    <div class="legend-small">
+        <button class="button" id="legend__show"></button>
+        <div class="legend__info">
+            <h4 class="legend__title">
+                Status:
+            </h4>
+            <ul>
+                <li class="legend__item">
+                    <div class="color-box rose"> </div>
+                    <div class="legend__descr">Research</div>
+                </li>
+                <li class="legend__item">
+                    <div class="color-box progress"> </div>
+                    <div class="legend__descr">In progress</div>
+                </li>
+                <li class="legend__item">
+                    <div class="color-box green"> </div>
+                    <div class="legend__descr">Backlog</div>
+                </li>
+                <li class="legend__item">
+                    <div class="color-box red"> </div>
+                    <div class="legend__descr">Reopened</div>
+                </li>
+                <li class="legend__item">
+                    <div class="color-box new"> </div>
+                    <div class="legend__descr">New</div>
+                </li>
+                <li class="legend__item">
+                    <div class="color-box grey"> </div>
+                    <div class="legend__descr">None</div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<script src="js/nouislider.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

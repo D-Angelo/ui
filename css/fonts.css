@@ -1,0 +1,51 @@
+
+
+@font-face {
+    font-family: 'Icons';
+    src:url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg#Homizio-Nova') format('svg'),
+    url('../fonts/icomoon.eot'),
+    url('../fonts/icomoon.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src:url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraBold-webfont.svg#Homizio-Nova') format('svg'),
+    url('../fonts/OpenSans-ExtraBold-webfont.eot'),
+    url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Light'), local('WorkSans-Light'), url('../fonts/Worksanslight.woff2') format('woff2'), url('../fonts/Worksanslight.woff') format('woff'), url('../fonts/Worksanslight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans'), local('WorkSans-Regular'), url('../fonts/Worksans.woff2') format('woff2'), url('../fonts/Worksans.woff') format('woff'), url('../fonts/Worksans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Medium'), local('WorkSans-Medium'), url('../fonts/Worksansmedium.woff2') format('woff2'), url('../fonts/Worksansmedium.woff') format('woff'), url('../fonts/Worksansmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans SemiBold'), local('WorkSans-SemiBold'), url('../fonts/Worksanssemibold.woff2') format('woff2'), url('../fonts/Worksanssemibold.woff') format('woff'), url('../fonts/Worksanssemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Bold'), local('WorkSans-Bold'), url('../fonts/Worksansbold.woff2') format('woff2'), url('../fonts/Worksansbold.woff') format('woff'), url('../fonts/Worksansbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,423 @@
+@import _rem.scss
+body
+  font-size: rem(14px)
+  color: #fff
+  background-color: #fafbfc
+  font-family: "Work Sans",sans-serif
+
+.container-fluid
+  margin: 16px
+
+.container-fluid > .row
+  border-radius: 5px
+  box-shadow: 0 0 2px rgba(59, 148, 236, 0.3)
+  background: #fff
+  padding:  8px 0
+
+.container-fluid > .date
+  background: transparent
+  box-shadow: none
+  padding: 0
+.header
+  background: #fff
+  padding: 0 1rem
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+.header-left,.header-right
+  display: flex
+  align-items: center
+.button
+    padding-left: 0.5rem
+    padding-right: 0.5rem
+.logo
+  color: #3d9aee
+  padding-right: 100px
+  text-transform: uppercase
+  font-family: "Open Sans", sans-serif
+  font-size: rem(20px)
+  font-weight: 800
+.save-status
+  font-size: 1rem
+  color: #cdd6e0
+  &:before
+    display: inline-block
+    content: "\e900"
+    font-family: Icons
+    font-size: 1rem
+    padding-right: 6px
+
+
+.button
+  min-width: 45px
+  min-height: 34px
+  outline: none
+  border: none
+  font-size: 1.5rem
+  font-family: "Icons"
+  background-color: transparent
+  transition: 400ms color ease-in
+  &-list
+    position: relative
+.button--view
+  color: #dde5ed
+  &:hover,&.active
+    color: #fd667b
+    transition: 400ms color ease-out
+.button--actions
+  color: #fd586f
+  padding: 26px 20px
+  &:hover
+    color: #dde5ed
+    transition: 400ms color ease-out
+  &.active
+    background: #1f8beb
+    color: #fff
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+.button--create
+  padding: 18px 22px
+  border-radius: 6px
+  background-color: #ff6e40
+  background-image: linear-gradient(to left, #ff5858 0%, #f857a6 100%)
+  color: #fff
+  font-size: rem(14px)
+  font-weight: 500
+  text-transform: uppercase
+  margin: 0px 30px 0 42px
+
+
+.date
+  display: flex
+  align-items: flex-end
+  color: #6893b5
+  &-calendar
+    display: flex
+    background: #fff
+    max-width: 11.8%
+    margin-right: 0.7%
+    flex: 0 0 11.8%
+    align-items: center
+    justify-content: space-between
+    box-shadow: 0 0 2px rgba(59, 148, 236, 0.3)
+    border-radius: 5px
+  &__button
+    color: #759cba
+    border-right: 1px solid #ecf3fb
+  &__text
+    font-size: 0.9rem
+    font-weight: 500
+    padding: 18px 5px
+    text-align: center
+  &-list
+    background: #fff
+    text-align: center
+    box-shadow: 0 0 2px rgba(59, 148, 236, 0.3)
+    border-radius: 0 5px 5px 0
+    &__item
+      font-size: rem(13px)
+      padding: 6px 0
+    &__item+&__item
+      border-left: 1px solid #ddebfa
+.date-range
+  margin-bottom: 6px
+  align-items: center
+  justify-content: space-between
+#date-range
+ background: #fafbfc
+ border: none
+ &__slider
+  width: 100%
+ &__start,&__end
+   font-size: rem(11px)
+   padding: 0 5px
+ &__end
+   text-align: right
+.noUi-handle
+  width: 20px !important
+  height: 14px !important
+  border-radius: 4px
+  background-color: #1f8beb
+  border: none
+  box-shadow: none
+  &:before,&:after
+    display: none
+.noUi-horizontal
+  height: 4px
+.noUi-connect
+  background-color: #89c0f1
+.noUi-target
+  box-shadow: none
+  border: none
+  background: #deedfa
+  
+
+.grid
+  background: transparent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  &__item+&__item
+   border-left: 1px dashed #ecf3fb
+.category
+  display: flex
+  padding: 0 8px
+  text-transform: uppercase
+.category__item+.category__item
+  margin-top: 5px
+.category__item
+  font-family: "Work Sans",sans-serif
+  font-weight: 600
+
+.category__title
+  box-shadow: 0 0 2px rgba(59, 148, 236, 0.3)
+  border-radius: 6px
+  background-color: #f1f8fe
+  width: 15%
+  h3
+    position: relative
+    top: 50%
+    color: #7590a7
+    transform: rotate(-90deg)  translateX(-50%)
+    white-space: nowrap
+    font-size: 1rem
+    font-weight: 700
+.category-list
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  width: 85%
+  padding:  0 5px
+
+.roads
+  position: relative
+.road
+  padding-bottom: 5px
+  min-height: 50px
+  align-items: center
+  background: transparent !important
+  [class*='col']
+    min-height: 5px
+    background:  #eef4f9
+.road__item, .category__item
+    border-radius: 6px
+    white-space: nowrap
+    overflow-x: hidden
+    text-overflow: ellipsis
+    text-align: center
+    padding:  16px 0
+.road.rose .road__item,
+.rose
+    background: #ff6197
+.road.yellow .road__item,
+.yellow
+    background: #fed100
+.road.green .road__item,
+.green
+    background: #39cf7c
+.road.red .road__item,
+.red
+    background: #ff6666
+.road.blue .road__item,
+.blue
+    background: #00c5fe
+.road.purple .road__item,
+.purple
+    background: #7e57c2
+.road.grey .road__item,
+.grey
+    background: #7d97ae
+.header-lightblue
+  background: #f1f8fe
+.header-blue
+  background: #82b7e6
+.header-darkblue
+  background: #1f8beb
+.category--wide
+  padding:  43px 0
+.legend
+  right: 0%
+  top: 50%
+  position: fixed
+  transition: 500ms all ease-out
+  &--visible
+    right: 165px
+  &-small
+   position: relative
+  &__item
+    display: flex
+    align-items: center
+    padding-bottom: 2px
+  &__info
+    position: absolute
+    top: 0
+    left: 60px
+    min-width: 165px
+    color: #6893b5
+    font-size: rem(12px)
+    padding: 20px 30px
+    background: #fff
+    z-index: -1
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  &__title
+    font-weight: 500
+    text-transform: uppercase
+    padding-bottom: 10px
+  &__descr
+    font-weight: 300
+    padding-left: 10px
+#legend__show
+  width: 59px
+  height: 57px
+  background: #ffffff url("../images/legend-ico.png") no-repeat 50% 50%
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 12px 0 0 12px
+.color-box
+  width: 24px
+  height: 23px
+  border-radius: 6px
+
+#sidebar
+  position: absolute
+  right: 0%
+  top: 100%
+  width: 290px
+  background: #fff
+  z-index: 50
+  overflow-y: hidden
+  max-height: 0px
+  opacity: 0
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  transition: 400ms all ease-in
+#sidebar.sidebar--visible
+    max-height: 2000px
+    opacity: 1
+    transition: 400ms all ease-out
+.sidebar
+  &-title
+    position: relative
+    background: #1f8beb url("../fonts/icomoon.svg#custom-layer")
+    padding: rem(36px)
+    max-height: 80px
+    overflow: hidden
+    &:before
+      display: block
+      content: '\e904'
+      position: absolute
+      right: 30px
+      bottom: -22px
+      color: #47a2f2
+      font-family: "Icons"
+      font-size: 4.8rem
+    h3
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 700
+.sidebar-title+.sidebar-group .sidebar-group-name
+  border-top: none
+.sidebar-stats+.sidebar-stats
+  margin-top: 35px
+.sidebar
+
+  &-group-name
+    display: flex
+    justify-content: space-between
+    border-top:  2px solid #dde5ed
+    border-bottom:  2px solid #dde5ed
+    h4
+      color: #1f8beb
+      font-size: rem(12px)
+      font-weight: 500
+      padding-left: 30px
+      line-height: 3.33
+      text-transform: uppercase
+  &-stats
+    padding: 15px 30px
+    font-weight: 300
+    max-height: 2000px
+    overflow: hidden
+    transition: 200ms all ease-in
+    &--hidden
+      padding: 0
+      max-height: 1px
+      transition: 200ms all ease-out
+    &__name
+      color: #6893b5
+      padding-bottom: 8px
+      font-weight: 400
+    &__option,&__textbox
+      border-radius: 5px
+      padding: 10px 17px
+      color: #7590a7
+      font-weight: 300
+    &__option
+      margin-bottom: 15px
+      border: 1px solid #dde5ed
+      background: #fafbfc
+      width: 100%
+      -webkit-appearance: none
+    &__textbox
+      background: #fafbfc
+      border: none
+      width: 80%
+    &__label
+      position: relative
+      color: #8ba1b4
+      font-size: 1rem
+      display: inline-block
+      vertical-align: top
+      padding-left: 32px
+      margin-bottom: 25px
+      &:before
+       content: ""
+       display: inline-block
+       position: absolute
+       width: 20px
+       height: 20px
+       border-radius: 5px
+       left: 0
+       border: 1px solid #dde5ed
+       background-color: #fafbfc
+       transition: 200ms background-color ease-in
+    &__checkbox
+       display: none
+    &__checkbox:checked+ &__label:before
+       background-color: #6893b5
+    &__color
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-bottom: 5px
+      .color-box
+        width: 39px
+        height: 36px
+
+.expand-button
+  position: relative
+  &:before
+   display: block
+   content: "\f107"
+   position: absolute
+   top: 30%
+   right: 1rem
+   font-family: "Icons"
+   font-size: 1.2rem
+   color: #6893b5
+.expand-button.active:before
+  content: "\f106"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
